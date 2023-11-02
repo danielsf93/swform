@@ -43,7 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insertQuery->bind_param("ssssssssssss", $horario, $data, $local, $frequencia, $emissora, $idioma, $pais, $equipamento, $antena, $observacao, $distancia, $alvo);
 
     if ($insertQuery->execute() === TRUE) {
-        echo "Dados inseridos com sucesso.";
+        print "<script>alert('Cadastrado com sucesso meu consagrado');</script>";
+        print "<script>location.href='?page=listar';</script>";
     } else {
         echo "Erro ao inserir dados na tabela 'form': " . $mysqli->error;
     }
