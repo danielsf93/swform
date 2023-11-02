@@ -1,4 +1,5 @@
 <?php
+//swform/check_login.php
 session_start();
 
 // Recebe os dados do formulário
@@ -26,9 +27,18 @@ $mysqli->select_db("swform");
 // Cria a tabela "form" com as colunas corretas
 $createTableQuery = "CREATE TABLE IF NOT EXISTS form (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    horario VARCHAR(4),
     data DATE,
-    hora VARCHAR(4),
-    frequencia INT
+    local TEXT,
+    frequencia INT,
+    emissora TEXT,
+    idioma TEXT,
+    pais TEXT,
+    equipamento TEXT,
+    antena TEXT,
+    observacao TEXT,
+    distancia TEXT,
+    alvo TEXT
 )";
 if ($mysqli->query($createTableQuery) === TRUE) {
     echo "Tabela 'form' criada com sucesso ou já existente.<br>";

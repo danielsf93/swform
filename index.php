@@ -1,4 +1,4 @@
 <?php
-//rachacuca/index.php
+//swform/index.php
 define('INDEX_FILE_LOCATION', __FILE__);
 $application = require('login.php');
