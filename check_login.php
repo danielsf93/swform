@@ -57,15 +57,15 @@ if ($mysqli->query($createTableLocalQuery) === TRUE) {
     die("Erro ao criar a tabela 'local': " . $mysqli->error);
 }
 
-// Cria a tabela "radio" com a coluna "radio"
-$createTableRadioQuery = "CREATE TABLE IF NOT EXISTS radio (
+// Cria a tabela "receptores" com a coluna "receptores"
+$createTablereceptoresQuery = "CREATE TABLE IF NOT EXISTS receptores (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    radio TEXT
+    receptores TEXT
 )";
-if ($mysqli->query($createTableRadioQuery) === TRUE) {
-    echo "Tabela 'radio' criada com sucesso ou já existente.<br>";
+if ($mysqli->query($createTablereceptoresQuery) === TRUE) {
+    echo "Tabela 'receptores' criada com sucesso ou já existente.<br>";
 } else {
-    die("Erro ao criar a tabela 'radio': " . $mysqli->error);
+    die("Erro ao criar a tabela 'receptores': " . $mysqli->error);
 }
 
 // Cria a tabela "antena" com a coluna "antena"
