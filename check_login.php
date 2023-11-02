@@ -50,6 +50,7 @@ if ($mysqli->query($createTableQuery) === TRUE) {
 if ($mysqli->ping()) {
     // Login bem-sucedido
     $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;  // Defina a senha na variável de sessão
     header('Location: welcome.php');
 } else {
     // Login falhou
