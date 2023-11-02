@@ -25,7 +25,7 @@ if ($mysqli->query($createDatabaseQuery) === TRUE) {
 $mysqli->select_db("swform");
 
 // Cria a tabela "form" com as colunas corretas
-$createTableQuery = "CREATE TABLE IF NOT EXISTS form (
+$createTableFormQuery = "CREATE TABLE IF NOT EXISTS form (
     id INT AUTO_INCREMENT PRIMARY KEY,
     horario VARCHAR(4),
     data DATE,
@@ -40,10 +40,43 @@ $createTableQuery = "CREATE TABLE IF NOT EXISTS form (
     distancia TEXT,
     alvo TEXT
 )";
-if ($mysqli->query($createTableQuery) === TRUE) {
+if ($mysqli->query($createTableFormQuery) === TRUE) {
     echo "Tabela 'form' criada com sucesso ou já existente.<br>";
 } else {
     die("Erro ao criar a tabela 'form': " . $mysqli->error);
+}
+
+// Cria a tabela "local" com a coluna "endereco"
+$createTableLocalQuery = "CREATE TABLE IF NOT EXISTS local (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    endereco TEXT
+)";
+if ($mysqli->query($createTableLocalQuery) === TRUE) {
+    echo "Tabela 'local' criada com sucesso ou já existente.<br>";
+} else {
+    die("Erro ao criar a tabela 'local': " . $mysqli->error);
+}
+
+// Cria a tabela "radio" com a coluna "radio"
+$createTableRadioQuery = "CREATE TABLE IF NOT EXISTS radio (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    radio TEXT
+)";
+if ($mysqli->query($createTableRadioQuery) === TRUE) {
+    echo "Tabela 'radio' criada com sucesso ou já existente.<br>";
+} else {
+    die("Erro ao criar a tabela 'radio': " . $mysqli->error);
+}
+
+// Cria a tabela "antena" com a coluna "antena"
+$createTableAntenaQuery = "CREATE TABLE IF NOT EXISTS antena (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    antena TEXT
+)";
+if ($mysqli->query($createTableAntenaQuery) === TRUE) {
+    echo "Tabela 'antena' criada com sucesso ou já existente.<br>";
+} else {
+    die("Erro ao criar a tabela 'antena': " . $mysqli->error);
 }
 
 // Verifica se a conexão com o banco de dados foi bem-sucedida
