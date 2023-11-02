@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Inclui o arquivo CSS para estilização -->
 </head>
 <body>
     <h1>Login</h1>
@@ -15,3 +16,4 @@
     </form>
 </body>
 </html>
+
