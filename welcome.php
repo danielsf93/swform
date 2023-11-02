@@ -22,6 +22,15 @@
             <li class="nav-item">
               <a class="nav-link" href="?page=listar">Listar escutas</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?page=receptores">Meus receptores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?page=antenas">Minhas antenas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?page=locais">Meus locais</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -40,11 +49,23 @@
               case "listar":
                 include("listar.php");
                 break;
+                case "receptores":
+                    include("receptores.php");
+                    break;
+                    case "antenas":
+                        include("antenas.php");
+                        break;
+                        case "locais":
+                            include("locais.php");
+                            break;
               default:
-                echo "<h1>SW Form</h1>";
+                echo "<h1>SW Form</h1><p>Esta é a plataforma de cadastro de radioescutas.<br>
+                Adicione seus equipamentos, antenas e endereços antes de cadastrar suas escutas.";
                 break;
             }
           ?>
+          
+        </p>
         </div>
       </div>
     </div>
